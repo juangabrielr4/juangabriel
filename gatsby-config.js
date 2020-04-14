@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Codegabo personal blog`,
+    title: `Codegabo`,
     description: `juan gabriel ramirez cruz is a Senior front-end developer with 7+ years of experience currently living in colombia. i'm open to new challenges as a freelance`,
     author: `@webnalero`,
   },
