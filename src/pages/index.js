@@ -9,6 +9,16 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Juan Gabriel Ramirez FrontEnd Developer" />
     <h1>Juan Gabriel Ramirez FrontEnd Developer</h1>
+    <div
+      style={{
+        borderRadius: `100%`,
+        overflow: `hidden`,
+        maxWidth: `300px`,
+        marginBottom: `1.45rem`,
+      }}
+    >
+      <Image />
+    </div>
     <p>i build react sites and develop amazing experiences.</p>
     <p>Passionate about developing amazing user experiences!</p>
     <p>
@@ -16,15 +26,6 @@ const IndexPage = () => (
       forward-thinking technology. I am obsessed with expanding my craft,
       solving challenging problems and staying on the bleeding edge.
     </p>
-    <div
-      style={{
-        borderRadius: `100%`,
-        maxWidth: `300px`,
-        marginBottom: `1.45rem`,
-      }}
-    >
-      <Image />
-    </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
