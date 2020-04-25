@@ -20,7 +20,6 @@ const IndexPage = () => (
     <Layout>
       <SEO title="Juan Gabriel Ramirez FrontEnd Developer" />
       <h1>Juan Gabriel Ramirez FrontEnd Developer</h1>
-      <Title>some title</Title>
       <div style={{display:`flex`, alignItems:`center`}}>
         <Section>i build react sites and develop amazing experiences.</Section>
         <div style={{
