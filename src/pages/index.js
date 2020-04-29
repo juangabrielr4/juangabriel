@@ -6,12 +6,21 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import styled, { css } from 'styled-components'
 
+import { motion } from "framer-motion"
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+}
+
+const SoftAppear = ({ children }) => (
+  <motion.div initial="hidden" animate="visible" variants={variants} >
+    {children}
+  </motion.div>
+)
 // Create a <Title> react component that renders an <h1> which is
 // centered, palevioletred and sized at 1.5em
 const Section = styled.p`
     font-size: 0.8em;
-    /* The GitHub button is a primary button
-    * edit this to target it specifically! */
     ${props => props.right && css`
     text-align: right;
 `}
@@ -21,7 +30,9 @@ const IndexPage = () => (
       <SEO title="Juan Gabriel Ramirez FrontEnd Developer" />
       <h1>Juan Gabriel Ramirez FrontEnd Developer</h1>
       <div style={{display:`flex`, alignItems:`center`}}>
-        <Section>i build react sites and develop amazing experiences.</Section>
+        <SoftAppear>
+          <Section>i build react sites and develop amazing experiences.</Section>
+        </SoftAppear>
         <div style={{
             borderRadius: `100%`,
             overflow: `hidden`,
@@ -31,7 +42,9 @@ const IndexPage = () => (
         >
           <Image />
         </div>
-        <Section right>Passionate about developing amazing user experiences!</Section>
+        <SoftAppear>
+          <Section right>Passionate about developing amazing user experiences!</Section>
+        </SoftAppear>
       </div>
       <p>
         Every position I have held has transformed my skill-set and goals towards
