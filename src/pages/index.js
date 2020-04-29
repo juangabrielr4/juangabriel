@@ -21,6 +21,7 @@ const SoftAppear = ({ children }) => (
 // centered, palevioletred and sized at 1.5em
 const Section = styled.p`
     font-size: 0.8em;
+    color: #99C794;
     ${props => props.right && css`
     text-align: right;
 `}
@@ -28,7 +29,9 @@ const Section = styled.p`
 const IndexPage = () => (
     <Layout>
       <SEO title="Juan Gabriel Ramirez FrontEnd Developer" />
-      <h1>Juan Gabriel Ramirez FrontEnd Developer</h1>
+      <h1 style={{color:`#5FB3B3`,fontSize:`21px`,textAlign:`right`}}>
+      Juan Gabriel Ramirez FrontEnd Developer
+      </h1>
       <div style={{display:`flex`, alignItems:`center`}}>
         <SoftAppear>
           <Section>i build react sites and develop amazing experiences.</Section>
@@ -51,7 +54,7 @@ const IndexPage = () => (
         forward-thinking technology. I am obsessed with expanding my craft,
         solving challenging problems and staying on the bleeding edge.
       </p>
-      <Link to="/page-2/">Go to page 2</Link>
+      <Link style={{color:`#FAC863`}} to="/page-2/">Go to page 2</Link>
     </Layout>
 )
 
