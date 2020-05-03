@@ -33,12 +33,17 @@ const social = [
     url: `https://codepen.io/codegabo`,
   },
   {
+    platform: `dev`,
+    icon: `dev`,
+    url: `https://dev.to/jgrc`,
+  },
+  {
     platform: `linkedin`,
     icon: `linkedin`,
     url: `https://www.linkedin.com/in/juangabrielramirez/`,
   },
   {
-    platform: `linkedin`,
+    platform: `stack overflow`,
     icon: `stack-overflow`,
     url: `https://es.stackoverflow.com/users/18928/juan-gabriel-ramirez`,
   },
