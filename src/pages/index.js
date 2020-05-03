@@ -37,6 +37,11 @@ const social = [
     icon: `linkedin`,
     url: `https://www.linkedin.com/in/juangabrielramirez/`,
   },
+  {
+    platform: `linkedin`,
+    icon: `stack-overflow`,
+    url: `https://es.stackoverflow.com/users/18928/juan-gabriel-ramirez`,
+  },
 ]
 
 const SoftAppear = ({ children }) => (
