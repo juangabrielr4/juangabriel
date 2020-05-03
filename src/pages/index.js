@@ -1,16 +1,43 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import styled, { css } from "styled-components"
-
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
+
+library.add(fab, faCheckSquare, faCoffee)
 const variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 }
+
+const social = [
+  {
+    platform: `github`,
+    icon: `github`,
+    url: `https://github.com/jg-rc`,
+  },
+  {
+    platform: `twitter`,
+    icon: `twitter`,
+    url: `https://twitter.com/webnalero`,
+  },
+  {
+    platform: `codepen`,
+    icon: `codepen`,
+    url: `https://codepen.io/codegabo`,
+  },
+  {
+    platform: `linkedin`,
+    icon: `linkedin`,
+    url: `https://www.linkedin.com/in/juangabrielramirez/`,
+  },
+]
 
 const SoftAppear = ({ children }) => (
   <motion.div initial="hidden" animate="visible" variants={variants}>
@@ -27,6 +54,9 @@ const Section = styled.p`
     css`
       text-align: right;
     `}
+`
+const SocialIcon = styled.a`
+  font-size: 24px;
 `
 const IndexPage = () => (
   <Layout>
@@ -59,6 +89,16 @@ const IndexPage = () => (
       forward-thinking technology. I am obsessed with expanding my craft,
       solving challenging problems and staying on the bleeding edge.
     </p>
+    <div className="div"></div>
+    <ul>
+      {social.map((el, index) => (
+        <li>
+          <SocialIcon target="_blank" href={el.url}>
+            <FontAwesomeIcon index={index} icon={["fab", el.icon]} />
+          </SocialIcon>
+        </li>
+      ))}
+    </ul>
     <Link style={{ color: `#FAC863` }} to="/page-2/">
       Go to page 2
     </Link>
