@@ -47,6 +47,11 @@ const social = [
     icon: `stack-overflow`,
     url: `https://es.stackoverflow.com/users/18928/juan-gabriel-ramirez`,
   },
+  {
+    platform: `npm`,
+    icon: `npm`,
+    url: `https://www.npmjs.com/~juangabriel`,
+  },
 ]
 
 const SoftAppear = ({ children }) => (
