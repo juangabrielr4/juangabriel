@@ -25,7 +25,7 @@ const social = [
   {
     platform: `twitter`,
     icon: `twitter`,
-    url: `https://twitter.com/webnalero`,
+    url: `https://twitter.com/DeprecatedUser`,
   },
   {
     platform: `codepen`,
