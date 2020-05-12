@@ -621,3 +621,9 @@ pre tt:after {
     font-size: 100%;
   }
 }
+a {
+  color: #FAC863;
+}
+a:visited{
+  color:inherit;
+}
