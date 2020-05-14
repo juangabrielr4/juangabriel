@@ -104,8 +104,7 @@ const IndexPage = () => (
       forward-thinking technology. I am obsessed with expanding my craft,
       solving challenging problems and staying on the bleeding edge.
     </p>
-    <div className="div"></div>
-    <ul>
+    <ul className="unstyled-list">
       {social.map((el, index) => (
         <li>
           <SocialIcon target="_blank" href={el.url}>
