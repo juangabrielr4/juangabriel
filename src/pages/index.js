@@ -114,9 +114,6 @@ const IndexPage = () => (
         </li>
       ))}
     </Ul>
-    <Link style={{ color: `#FAC863` }} to="/page-2/">
-      Go to page 2
-    </Link>
   </Layout>
 )
 
