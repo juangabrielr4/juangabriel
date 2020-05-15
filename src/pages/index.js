@@ -13,6 +13,7 @@ import { motion } from "framer-motion"
 import tw from 'twin.macro'
 
 library.add(fab, faCheckSquare, faCoffee)
+
 const variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -72,7 +73,6 @@ const Section = styled.p`
 const SocialIcon = styled.a`
   font-size: 25px;
 `
-const Ul = tw.ul`flex justify-around max-w-sm m-auto`
 
 const IndexPage = () => (
   <Layout>
@@ -100,7 +100,7 @@ const IndexPage = () => (
         </Section>
       </SoftAppear>
     </div>
-    <Ul>
+    <ul tw="flex justify-around max-w-sm m-auto">
       {social.map((el, index) => (
         <li>
           <SocialIcon target="_blank" href={el.url}>
@@ -108,7 +108,7 @@ const IndexPage = () => (
           </SocialIcon>
         </li>
       ))}
-    </Ul>
+    </ul>
     <p>
       Every position I have held has transformed my skill-set and goals towards
       forward-thinking technology. I am obsessed with expanding my craft,
