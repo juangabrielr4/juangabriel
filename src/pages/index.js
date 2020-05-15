@@ -3,13 +3,14 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import { Global, css } from "@emotion/core"
+import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
+import tw from 'twin.macro'
 
 library.add(fab, faCheckSquare, faCoffee)
 const variants = {
@@ -63,6 +64,7 @@ const SoftAppear = ({ children }) => (
 // Create a <Title> react component that renders an <h1> which is
 // centered, palevioletred and sized at 1.5em
 const Section = styled.p`
+  ${tw`border`}
   font-size: 0.8em;
   color: #99c794;
   text-align: ${props => props.right && 'righ'}; `
