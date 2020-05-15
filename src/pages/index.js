@@ -64,7 +64,7 @@ const SoftAppear = ({ children }) => (
 // Create a <Title> react component that renders an <h1> which is
 // centered, palevioletred and sized at 1.5em
 const Section = styled.p`
-  ${tw`border`}
+  ${tw`border-solid`}
   font-size: 0.8em;
   color: #99c794;
   text-align: ${props => props.right && 'righ'}; `
@@ -72,6 +72,8 @@ const Section = styled.p`
 const SocialIcon = styled.a`
   font-size: 25px;
 `
+const Ul = tw.ul`flex justify-around`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Juan Gabriel Ramirez FrontEnd Developer" />
@@ -103,7 +105,7 @@ const IndexPage = () => (
       forward-thinking technology. I am obsessed with expanding my craft,
       solving challenging problems and staying on the bleeding edge.
     </p>
-    <ul className="unstyled-list">
+    <Ul className="list-none">
       {social.map((el, index) => (
         <li>
           <SocialIcon target="_blank" href={el.url}>
@@ -111,7 +113,7 @@ const IndexPage = () => (
           </SocialIcon>
         </li>
       ))}
-    </ul>
+    </Ul>
     <Link style={{ color: `#FAC863` }} to="/page-2/">
       Go to page 2
     </Link>
