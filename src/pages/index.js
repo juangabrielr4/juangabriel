@@ -72,7 +72,7 @@ const Section = styled.p`
 const SocialIcon = styled.a`
   font-size: 25px;
 `
-const Ul = tw.ul`flex justify-around`
+const Ul = tw.ul`flex justify-around max-w-sm m-auto`
 
 const IndexPage = () => (
   <Layout>
@@ -100,12 +100,7 @@ const IndexPage = () => (
         </Section>
       </SoftAppear>
     </div>
-    <p>
-      Every position I have held has transformed my skill-set and goals towards
-      forward-thinking technology. I am obsessed with expanding my craft,
-      solving challenging problems and staying on the bleeding edge.
-    </p>
-    <Ul className="list-none">
+    <Ul>
       {social.map((el, index) => (
         <li>
           <SocialIcon target="_blank" href={el.url}>
@@ -114,6 +109,11 @@ const IndexPage = () => (
         </li>
       ))}
     </Ul>
+    <p>
+      Every position I have held has transformed my skill-set and goals towards
+      forward-thinking technology. I am obsessed with expanding my craft,
+      solving challenging problems and staying on the bleeding edge.
+    </p>
   </Layout>
 )
 
