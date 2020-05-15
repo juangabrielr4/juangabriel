@@ -67,7 +67,7 @@ const Section = styled.p`
   ${tw`border-solid`}
   font-size: 0.8em;
   color: #99c794;
-  text-align: ${props => props.right && 'righ'}; `
+  text-align: ${props => props.right && 'right'}; `
 
 const SocialIcon = styled.a`
   font-size: 25px;
