@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import { Global, css } from "@emotion/core"
+import styled from "@emotion/styled"
 import styled, { css } from "styled-components"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -64,14 +66,10 @@ const SoftAppear = ({ children }) => (
 const Section = styled.p`
   font-size: 0.8em;
   color: #99c794;
-  ${props =>
-    props.right &&
-    css`
-      text-align: right;
-    `}
-`
+  text-align: ${props => props.right && 'righ'}; `
+
 const SocialIcon = styled.a`
-  font-size: 24px;
+  font-size: 25px;
 `
 const IndexPage = () => (
   <Layout>
