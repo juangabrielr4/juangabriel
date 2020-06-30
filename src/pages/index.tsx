@@ -3,14 +3,13 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import { css } from "@emotion/core"
-import styled from "@emotion/styled"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
 import tw from 'twin.macro'
+import Fullpage from "@codegabo/reactivefullpage"
 
 library.add(fab, faCheckSquare, faCoffee)
 
@@ -57,22 +56,28 @@ const social = [
   },
 ]
 
-const SoftAppear = ({ children }) => (
+export interface LayoutProps {
+  children: React.ReactNode
+}
+
+const SoftAppear = ({ children }:LayoutProps) => (
   <motion.div initial="hidden" animate="visible" variants={variants}>
     {children}
   </motion.div>
 )
 // Create a <Title> react component that renders an <h1> which is
-// centered, palevioletred and sized at 1.5em
-const Section = styled.p`
-  ${tw`border-solid`}
-  font-size: 0.8em;
-  color: #99c794;
-  text-align: ${props => props.right && 'right'}; `
 
-const SocialIcon = styled.a`
-  font-size: 25px;
-`
+// centered, palevioletred and sized at 1.5em
+
+const FullpageReactive = ()=>(
+  <Fullpage >
+    <div>
+      <IndexPage/>
+    </div>
+    <div>
+      prueba 2
+    </div>
+  </Fullpage>)
 
 const IndexPage = () => (
   <Layout>
@@ -82,7 +87,6 @@ const IndexPage = () => (
     </h1>
     <div style={{ display: `flex`, alignItems: `center` }}>
       <SoftAppear>
-        <Section>i build react sites and develop amazing experiences.</Section>
       </SoftAppear>
       <div
         style={{
@@ -95,17 +99,12 @@ const IndexPage = () => (
         <Image />
       </div>
       <SoftAppear>
-        <Section right>
-          Passionate about developing amazing user experiences!
-        </Section>
       </SoftAppear>
     </div>
     <ul tw="flex justify-around max-w-sm m-auto">
       {social.map((el, index) => (
         <li>
-          <SocialIcon target="_blank" href={el.url}>
             <FontAwesomeIcon index={index} icon={["fab", el.icon]} />
-          </SocialIcon>
         </li>
       ))}
     </ul>
@@ -117,4 +116,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default FullpageReactive
