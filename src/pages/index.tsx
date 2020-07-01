@@ -11,6 +11,15 @@ import { motion } from "framer-motion"
 import tw from 'twin.macro'
 import Fullpage from "@codegabo/reactivefullpage"
 
+import {
+  IconLookup,
+  IconDefinition,
+  findIconDefinition
+} from '@fortawesome/fontawesome-svg-core'
+
+const coffeeLookup: IconLookup = { prefix: 'fas', iconName: 'coffee' }
+const coffeeIconDefinition: IconDefinition = findIconDefinition(coffeeLookup)
+
 library.add(fab, faCheckSquare, faCoffee)
 
 const variants = {
@@ -103,8 +112,8 @@ const IndexPage = () => (
     </div>
     <ul tw="flex justify-around max-w-sm m-auto">
       {social.map((el, index) => (
-        <li>
-            <FontAwesomeIcon index={index} icon={["fab", el.icon]} />
+        <li key={index}>
+            <FontAwesomeIcon  icon={coffeeIconDefinition} />
         </li>
       ))}
     </ul>
