@@ -5,22 +5,13 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import { library, IconName } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
 import 'twin.macro'
 import Fullpage from "@codegabo/reactivefullpage"
 
-import {
-  IconLookup,
-  IconDefinition,
-  findIconDefinition
-} from '@fortawesome/fontawesome-svg-core'
-
-const coffeeLookup: IconLookup = { prefix: 'fas', iconName: 'github' }
-const coffeeIconDefinition: IconDefinition = findIconDefinition(coffeeLookup)
-
-library.add(fab, faCheckSquare, faCoffee)
+library.add(fab, faEnvelope)
 
 const variants = {
   hidden: { opacity: 0 },
@@ -124,6 +115,10 @@ const IndexPage = () => (
     <p>
       Every position I have held has transformed my skillset and goals towards forward-thinking technology. I am obsessed with expanding my craft, solving challenging problems and staying on the bleeding edge.
     </p>
+    <a tw="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center" href="mailto:codegabo@gmail.com">
+      <FontAwesomeIcon tw="mr-2" icon="envelope"/>
+      Get in touch
+    </a>
   </Layout>
 )
 
