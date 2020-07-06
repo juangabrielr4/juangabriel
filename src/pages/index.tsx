@@ -10,6 +10,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
 import 'twin.macro'
 import Fullpage from "@codegabo/reactivefullpage"
+import {url} from "inspector"
 
 library.add(fab, faEnvelope)
 
@@ -54,6 +55,11 @@ const social = [
     icon: `npm`,
     url: `https://www.npmjs.com/~juangabriel`,
   },
+  {
+    platform:`youtube`,
+    icon: `youtube-play`,
+    url: `https://www.youtube.com/channel/UCi0J3yA3m5CuyR8E-0SE23w`
+  }
 ]
 
 export interface LayoutProps {
