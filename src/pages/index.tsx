@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
-import tw from 'twin.macro'
+import 'twin.macro'
 import Fullpage from "@codegabo/reactivefullpage"
 
 import {
@@ -84,7 +84,7 @@ const FullpageReactive = ()=>(
       <IndexPage/>
     </div>
     <div>
-      prueba 2
+      <h2> Experience </h2>
     </div>
   </Fullpage>)
 
@@ -94,9 +94,16 @@ const IndexPage = () => (
     <h1 style={{ color: `#5FB3B3`, fontSize: `21px`, textAlign: `right` }}>
       Juan Gabriel Ramirez FrontEnd Developer
     </h1>
-    <div style={{ display: `flex`, alignItems: `center` }}>
-      <SoftAppear>
-      </SoftAppear>
+    <div style={{ display: `flex`, alignItems: `center`, justifyContent: `space-between` }}>
+      <ul tw="m-0">
+        {social.map((el, index) => (
+          <li key={index}>
+            <a href={el.url}>
+              <FontAwesomeIcon  icon={['fab', el.icon as IconName]} />
+            </a>
+          </li>
+        ))}
+      </ul>
       <div
         style={{
           borderRadius: `100%`,
@@ -107,18 +114,7 @@ const IndexPage = () => (
       >
         <Image />
       </div>
-      <SoftAppear>
-      </SoftAppear>
     </div>
-    <ul tw="flex justify-around max-w-sm m-auto">
-      {social.map((el, index) => (
-        <li key={index}>
-          <a href={el.url}>
-            <FontAwesomeIcon  icon={['fab', el.icon as IconName]} />
-          </a>
-        </li>
-      ))}
-    </ul>
     <p>
       Every position I have held has transformed my skill-set and goals towards
       forward-thinking technology. I am obsessed with expanding my craft,
