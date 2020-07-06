@@ -107,18 +107,22 @@ const IndexPage = () => (
       <div
         style={{
           borderRadius: `100%`,
-          overflow: `hidden`,
-          width: `300px`,
-          marginBottom: `1.45rem`,
+            overflow: `hidden`,
+            width: `300px`,
+            marginBottom: `1.45rem`,
         }}
       >
         <Image />
       </div>
     </div>
     <p>
-      Every position I have held has transformed my skill-set and goals towards
-      forward-thinking technology. I am obsessed with expanding my craft,
-      solving challenging problems and staying on the bleeding edge.
+      With over 8 years of experience in the web development world, my biggest goal is to help companies by bringing simple solutions to complex problems.
+    </p>
+    <p>
+      Passionate about developing amazing user experiences!
+    </p>
+    <p>
+      Every position I have held has transformed my skillset and goals towards forward-thinking technology. I am obsessed with expanding my craft, solving challenging problems and staying on the bleeding edge.
     </p>
   </Layout>
 )
