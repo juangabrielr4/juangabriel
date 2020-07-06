@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import { library } from "@fortawesome/fontawesome-svg-core"
+import { library, IconName } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
@@ -17,7 +17,7 @@ import {
   findIconDefinition
 } from '@fortawesome/fontawesome-svg-core'
 
-const coffeeLookup: IconLookup = { prefix: 'fas', iconName: 'coffee' }
+const coffeeLookup: IconLookup = { prefix: 'fas', iconName: 'github' }
 const coffeeIconDefinition: IconDefinition = findIconDefinition(coffeeLookup)
 
 library.add(fab, faCheckSquare, faCoffee)
@@ -113,7 +113,9 @@ const IndexPage = () => (
     <ul tw="flex justify-around max-w-sm m-auto">
       {social.map((el, index) => (
         <li key={index}>
-            <FontAwesomeIcon  icon={coffeeIconDefinition} />
+          <a href={el.url}>
+            <FontAwesomeIcon  icon={['fab', el.icon as IconName]} />
+          </a>
         </li>
       ))}
     </ul>
