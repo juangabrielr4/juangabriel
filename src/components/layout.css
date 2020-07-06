@@ -6,6 +6,7 @@
     --font-color: #e1e1ff;
     --bg-color: #161625;
     --heading-color: #818cab;
+    --accent-color: #FAC863;
   }
 }
 @media (prefers-color-scheme: light) {
@@ -15,6 +16,7 @@
     --font-color: #424242;
     --bg-color: #fff;
     --heading-color: #292922;
+    --accent-color: #4430af;
   }
 }
 
@@ -654,11 +656,11 @@ pre tt:after {
   }
 }
 a {
-  color: #FAC863;
+  color: var(--accent-color);
 }
 a:visited{
-  color: #FAC863;
+  color: var(--accent-color);
 }
 .unstyled-list {
-  list-style: none; 
+  list-style: none;
 }
