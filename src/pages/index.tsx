@@ -94,7 +94,7 @@ const IndexPage = () => (
     <h1 style={{ color: `#5FB3B3`, fontSize: `21px`, textAlign: `right` }}>
       Juan Gabriel Ramirez FrontEnd Developer
     </h1>
-    <div style={{ display: `flex`, alignItems: `center`, justifyContent: `space-between` }}>
+    <div style={{ display: `flex`, alignItems: `center`, justifyContent: `center` }}>
       <ul tw="m-0">
         {social.map((el, index) => (
           <li key={index}>
