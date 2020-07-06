@@ -57,7 +57,7 @@ const social = [
   },
   {
     platform:`youtube`,
-    icon: `youtube-play`,
+    icon: `youtube`,
     url: `https://www.youtube.com/channel/UCi0J3yA3m5CuyR8E-0SE23w`
   }
 ]
