@@ -91,16 +91,8 @@ const IndexPage = () => (
     <h1 style={{ color: `#5FB3B3`, fontSize: `21px`, textAlign: `right` }}>
       Juan Gabriel Ramirez FrontEnd Developer
     </h1>
-    <div style={{ display: `flex`, alignItems: `center`, justifyContent: `center` }}>
-      <ul tw="m-0">
-        {social.map((el, index) => (
-          <li key={index}>
-            <a href={el.url}>
-              <FontAwesomeIcon  icon={['fab', el.icon as IconName]} />
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div tw="flex flex-col items-center justify-center">
+
       <div
         style={{
           borderRadius: `100%`,
@@ -109,8 +101,17 @@ const IndexPage = () => (
             marginBottom: `1.45rem`,
         }}
       >
-        <Image />
+        <Image file={"juan_gabriel.jpg"} />
       </div>
+      <ul tw="flex m-0">
+        {social.map((el, index) => (
+          <li key={index}>
+            <a tw="p-2" href={el.url}>
+              <FontAwesomeIcon  icon={['fab', el.icon as IconName]} />
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
     <p>
       With over 8 years of experience in the web development world, my biggest goal is to help companies by bringing simple solutions to complex problems.
