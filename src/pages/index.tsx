@@ -8,12 +8,91 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
-import 'twin.macro'
+import "twin.macro"
 import Fullpage from "@codegabo/reactivefullpage"
-import {url} from "inspector"
+import { url } from "inspector"
+import Particles from "react-tsparticles"
 
 library.add(fab, faEnvelope)
 
+const CustomParticles = () => (
+  <Particles
+    id="tsparticles"
+    options={{
+      fpsLimit: 60,
+      interactivity: {
+        detectsOn: "canvas",
+        events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+          resize: true,
+        },
+        modes: {
+          bubble: {
+            distance: 400,
+            duration: 2,
+            opacity: 0.8,
+            size: 40,
+          },
+          push: {
+            quantity: 4,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        collisions: {
+          enable: true,
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outMode: "bounce",
+          random: false,
+          speed: 6,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+          value: 80,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          random: true,
+          value: 5,
+        },
+      },
+      detectRetina: true,
+    }}
+  />
+)
 const variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -56,17 +135,17 @@ const social = [
     url: `https://www.npmjs.com/~juangabriel`,
   },
   {
-    platform:`youtube`,
+    platform: `youtube`,
     icon: `youtube`,
-    url: `https://www.youtube.com/channel/UCi0J3yA3m5CuyR8E-0SE23w`
-  }
+    url: `https://www.youtube.com/channel/UCi0J3yA3m5CuyR8E-0SE23w`,
+  },
 ]
 
 export interface LayoutProps {
   children: React.ReactNode
 }
 
-const SoftAppear = ({ children }:LayoutProps) => (
+const SoftAppear = ({ children }: LayoutProps) => (
   <motion.div initial="hidden" animate="visible" variants={variants}>
     {children}
   </motion.div>
@@ -75,55 +154,77 @@ const SoftAppear = ({ children }:LayoutProps) => (
 
 // centered, palevioletred and sized at 1.5em
 
-const FullpageReactive = ()=>(
-  <Fullpage >
+const FullpageReactive = () => (
+  <Fullpage>
     <div>
-      <IndexPage/>
+      <IndexPage />
     </div>
     <div>
       <h2> Experience </h2>
     </div>
-  </Fullpage>)
+  </Fullpage>
+)
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Juan Gabriel Ramirez FrontEnd Developer" />
-    <h1 style={{ color: `#5FB3B3`, fontSize: `21px`, textAlign: `right` }}>
-      Juan Gabriel Ramirez FrontEnd Developer
-    </h1>
-    <div tw="flex flex-col items-center justify-center">
-
+    <div style={{position:`relative`}} className="hero">
+      <CustomParticles />
       <div
         style={{
-          borderRadius: `100%`,
-            overflow: `hidden`,
-            width: `300px`,
-            marginBottom: `1.45rem`,
+          position: `absolute`,
+          top: `50%`,
+          left: `50%`,
+          transform: `translate(-50%, -50%)`
         }}
-      >
-        <Image file={"juan_gabriel.jpg"} />
+        clasName="hero__iner">
+        <h1
+          style={{ color: `#5FB3B3`, fontSize: `21px`, textAlign: `right` }}>
+          Juan Gabriel Ramirez FrontEnd Developer
+        </h1>
+        <div
+          style={{
+            backdropFilter: `blur(1rem)`
+          }}
+          tw="flex flex-col items-center justify-center">
+          <div
+            style={{
+              borderRadius: `100%`,
+              overflow: `hidden`,
+              width: `300px`,
+              marginBottom: `1.45rem`,
+            }}
+          >
+            <Image file={"juan_gabriel.jpg"} />
+          </div>
+          <ul tw="flex m-0">
+            {social.map((el, index) => (
+              <li key={index}>
+                <a tw="p-2" href={el.url}>
+                  <FontAwesomeIcon icon={["fab", el.icon as IconName]} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <ul tw="flex m-0">
-        {social.map((el, index) => (
-          <li key={index}>
-            <a tw="p-2" href={el.url}>
-              <FontAwesomeIcon  icon={['fab', el.icon as IconName]} />
-            </a>
-          </li>
-        ))}
-      </ul>
     </div>
     <p>
-      With over 8 years of experience in the web development world, my biggest goal is to help companies by bringing simple solutions to complex problems.
+      With over 8 years of experience in the web development world, my biggest
+      goal is to help companies by bringing simple solutions to complex
+      problems.
     </p>
+    <p>Passionate about developing amazing user experiences!</p>
     <p>
-      Passionate about developing amazing user experiences!
+      Every position I have held has transformed my skillset and goals towards
+      forward-thinking technology. I am obsessed with expanding my craft,
+      solving challenging problems and staying on the bleeding edge.
     </p>
-    <p>
-      Every position I have held has transformed my skillset and goals towards forward-thinking technology. I am obsessed with expanding my craft, solving challenging problems and staying on the bleeding edge.
-    </p>
-    <a tw="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center" href="mailto:codegabo@gmail.com">
-      <FontAwesomeIcon tw="mr-2" icon="envelope"/>
+    <a
+      tw="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center"
+      href="mailto:codegabo@gmail.com"
+    >
+      <FontAwesomeIcon tw="mr-2" icon="envelope" />
       Get in touch
     </a>
   </Layout>

@@ -16,7 +16,7 @@
     --font-color: #424242;
     --bg-color: #fff;
     --heading-color: #292922;
-    --accent-color: #4430af;
+    --accent-color: #FFFFFF;
   }
 }
 
@@ -663,4 +663,9 @@ a:visited{
 }
 .unstyled-list {
   list-style: none;
+}
+#tsparticles {
+  background: #4B15C1;
+  background: -webkit-linear-gradient(left, #4B15C1, #006DED);
+  background: linear-gradient(to right, #4B15C1, #006DED);
 }
