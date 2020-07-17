@@ -192,7 +192,7 @@ const IndexPage = () => (
             style={{
               borderRadius: `100%`,
               overflow: `hidden`,
-              width: `300px`,
+              width: `70%`,
               marginBottom: `1.45rem`,
             }}
           >
