@@ -26,6 +26,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
+    "react-tsparticles": "^1.17.1",
     "tailwindcss": "^1.4.6",
     "twin.macro": "^1.5.0"
   },
