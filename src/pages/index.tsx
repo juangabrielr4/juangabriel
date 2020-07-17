@@ -168,25 +168,26 @@ const FullpageReactive = () => (
 const IndexPage = () => (
   <Layout>
     <SEO title="Juan Gabriel Ramirez FrontEnd Developer" />
-    <div style={{position:`relative`}} className="hero">
+    <div style={{ position: `relative` }} className="hero">
       <CustomParticles />
       <div
         style={{
           position: `absolute`,
           top: `50%`,
           left: `50%`,
-          transform: `translate(-50%, -50%)`
+          transform: `translate(-50%, -50%)`,
         }}
-        clasName="hero__iner">
-        <h1
-          style={{ color: `#5FB3B3`, fontSize: `21px`, textAlign: `right` }}>
+        clasName="hero__iner"
+      >
+        <h1 style={{ color: `#5FB3B3`, fontSize: `21px`, textAlign: `right` }}>
           Juan Gabriel Ramirez FrontEnd Developer
         </h1>
         <div
           style={{
-            backdropFilter: `blur(1rem)`
+            backdropFilter: `blur(1rem)`,
           }}
-          tw="flex flex-col items-center justify-center">
+          tw="flex flex-col items-center justify-center"
+        >
           <div
             style={{
               borderRadius: `100%`,
@@ -209,24 +210,32 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-    <p>
-      With over 8 years of experience in the web development world, my biggest
-      goal is to help companies by bringing simple solutions to complex
-      problems.
-    </p>
-    <p>Passionate about developing amazing user experiences!</p>
-    <p>
-      Every position I have held has transformed my skillset and goals towards
-      forward-thinking technology. I am obsessed with expanding my craft,
-      solving challenging problems and staying on the bleeding edge.
-    </p>
-    <a
-      tw="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center"
-      href="mailto:codegabo@gmail.com"
+    <div
+      style={{ 
+        margin: `0 auto`,
+        maxWidth: 960,
+        padding: `3rem 1.0875rem`,
+      }}
     >
-      <FontAwesomeIcon tw="mr-2" icon="envelope" />
-      Get in touch
-    </a>
+      <p>
+        With over 8 years of experience in the web development world, my biggest
+        goal is to help companies by bringing simple solutions to complex
+        problems.
+      </p>
+      <p>Passionate about developing amazing user experiences!</p>
+      <p>
+        Every position I have held has transformed my skillset and goals towards
+        forward-thinking technology. I am obsessed with expanding my craft,
+        solving challenging problems and staying on the bleeding edge.
+      </p>
+      <a
+        tw="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center"
+        href="mailto:codegabo@gmail.com"
+      >
+        <FontAwesomeIcon tw="mr-2" icon="envelope" />
+        Get in touch
+      </a>
+    </div>
   </Layout>
 )
 
