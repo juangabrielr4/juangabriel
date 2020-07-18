@@ -179,15 +179,17 @@ const IndexPage = () => (
         }}
         clasName="hero__iner"
       >
-        <h1 style={{ color: `#5FB3B3`, fontSize: `21px`, textAlign: `right` }}>
-          Juan Gabriel Ramirez FrontEnd Developer
-        </h1>
         <div
           style={{
             backdropFilter: `blur(1rem)`,
           }}
           tw="flex flex-col items-center justify-center"
         >
+          <h1 style={{ color: `#5FB3B3`, fontSize: `21px` }}>
+            Juan Gabriel Ramirez
+            <br />
+            <sub>Senior FrontEnd Developer</sub>
+          </h1>
           <div
             style={{
               borderRadius: `100%`,
