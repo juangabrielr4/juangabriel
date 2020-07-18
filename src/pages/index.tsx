@@ -5,7 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import { library, IconName } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope, faCode } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
 import "twin.macro"
@@ -13,7 +13,7 @@ import Fullpage from "@codegabo/reactivefullpage"
 import { url } from "inspector"
 import Particles from "react-tsparticles"
 
-library.add(fab, faEnvelope)
+library.add(fab, faCode, faEnvelope)
 
 const CustomParticles = () => (
   <Particles
