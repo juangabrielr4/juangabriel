@@ -182,6 +182,7 @@ const IndexPage = () => (
         <div
           style={{
             backdropFilter: `blur(1rem)`,
+            borderRadius: `5%`
           }}
           tw="flex flex-col items-center justify-center"
         >
