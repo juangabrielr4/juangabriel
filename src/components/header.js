@@ -42,6 +42,7 @@ const Header = ({ siteTitle }) => (
       >
         <li><a href="#">About</a></li>
         <li><a href="#">Experience</a></li>
+        <li><a href="#">Skills</a></li>
       </ul>
     </div>
   </header>
