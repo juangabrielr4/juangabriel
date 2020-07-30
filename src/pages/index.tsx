@@ -5,7 +5,11 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import { library, IconName } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope, faCode } from "@fortawesome/free-solid-svg-icons"
+import {
+  faEnvelope,
+  faCode,
+  faAngleDoubleDown,
+} from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
 import "twin.macro"
@@ -13,7 +17,7 @@ import Fullpage from "@codegabo/reactivefullpage"
 import { url } from "inspector"
 import Particles from "react-tsparticles"
 
-library.add(fab, faCode, faEnvelope)
+library.add(fab, faCode, faEnvelope, faAngleDoubleDown)
 
 const CustomParticles = () => (
   <Particles
@@ -215,7 +219,7 @@ const IndexPage = () => (
               margin: `0 auto`,
               maxWidth: 960,
               padding: `3rem 1.0875rem`,
-              color: `white`
+              color: `white`,
             }}
           >
             <p>
@@ -239,6 +243,7 @@ const IndexPage = () => (
             </a>
           </div>
         </div>
+        <FontAwesomeIcon icon="AngleDoubleDown" />
       </div>
     </div>
   </Layout>
