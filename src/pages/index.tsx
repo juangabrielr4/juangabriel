@@ -181,8 +181,8 @@ const IndexPage = () => (
       >
         <div
           style={{
-            backdropFilter: `blur(1rem)`,
-            borderRadius: `5%`
+            backdropFilter: `blur(1px)`,
+            borderRadius: `5%`,
           }}
           tw="flex flex-col items-center justify-center"
         >
@@ -195,7 +195,7 @@ const IndexPage = () => (
             style={{
               borderRadius: `100%`,
               overflow: `hidden`,
-              width: `70%`,
+              width: `200px`,
               marginBottom: `1.45rem`,
             }}
           >
@@ -210,34 +210,36 @@ const IndexPage = () => (
               </li>
             ))}
           </ul>
+          <div
+            style={{
+              margin: `0 auto`,
+              maxWidth: 960,
+              padding: `3rem 1.0875rem`,
+              color: `white`
+            }}
+          >
+            <p>
+              With over 8 years of experience in the web development world, my
+              biggest goal is to help companies by bringing simple solutions to
+              complex problems.
+            </p>
+            <p>Passionate about developing amazing user experiences!</p>
+            <p>
+              Every position I have held has transformed my skillset and goals
+              towards forward-thinking technology. I am obsessed with expanding
+              my craft, solving challenging problems and staying on the bleeding
+              edge.
+            </p>
+            <a
+              tw="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center"
+              href="mailto:codegabo@gmail.com"
+            >
+              <FontAwesomeIcon tw="mr-2" icon="envelope" />
+              Get in touch
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `3rem 1.0875rem`,
-      }}
-    >
-      <p>
-        With over 8 years of experience in the web development world, my biggest
-        goal is to help companies by bringing simple solutions to complex
-        problems.
-      </p>
-      <p>Passionate about developing amazing user experiences!</p>
-      <p>
-        Every position I have held has transformed my skillset and goals towards
-        forward-thinking technology. I am obsessed with expanding my craft,
-        solving challenging problems and staying on the bleeding edge.
-      </p>
-      <a
-        tw="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded inline-flex items-center"
-        href="mailto:codegabo@gmail.com"
-      >
-        <FontAwesomeIcon tw="mr-2" icon="envelope" />
-        Get in touch
-      </a>
     </div>
   </Layout>
 )
