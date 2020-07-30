@@ -124,7 +124,7 @@ const IndexPage = () => (
           left: `50%`,
           transform: `translate(-50%, -50%)`,
         }}
-        clasName="hero__iner"
+        className="hero__iner"
       >
         <div
           style={{
