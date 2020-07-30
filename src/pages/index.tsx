@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
+import CustomParticles from "../components/custom-particles"
 import SEO from "../components/seo"
 import { library, IconName } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -15,88 +16,9 @@ import { motion } from "framer-motion"
 import "twin.macro"
 import Fullpage from "@codegabo/reactivefullpage"
 import { url } from "inspector"
-import Particles from "react-tsparticles"
 
 library.add(fab, faCode, faEnvelope, faAngleDoubleDown)
 
-const CustomParticles = () => (
-  <Particles
-    id="tsparticles"
-    options={{
-      fpsLimit: 60,
-      interactivity: {
-        detectsOn: "canvas",
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
-          resize: true,
-        },
-        modes: {
-          bubble: {
-            distance: 400,
-            duration: 2,
-            opacity: 0.8,
-            size: 40,
-          },
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        collisions: {
-          enable: true,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outMode: "bounce",
-          random: false,
-          speed: 6,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-            value_area: 800,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          random: true,
-          value: 5,
-        },
-      },
-      detectRetina: true,
-    }}
-  />
-)
 const variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -149,14 +71,35 @@ export interface LayoutProps {
   children: React.ReactNode
 }
 
+const Avatar = () => {
+  const [width, setWidth] = React.useState(window.innerWidth)
+  const breakpoint = 620
+
+  const ImagePage = () => (
+    <div
+      style={{
+        borderRadius: `100%`,
+        overflow: `hidden`,
+        width: `200px`,
+        marginBottom: `1.45rem`,
+      }}
+    >
+      <Image file={"juan_gabriel.jpg"} />
+    </div>
+  )
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+    window.addEventListener("resize", handleWindowResize)
+    return () => window.removeEventListener("resize", handleWindowResize)
+  }, [])
+
+  return width > breakpoint ? <ImagePage /> : <hr/>
+}
 const SoftAppear = ({ children }: LayoutProps) => (
   <motion.div initial="hidden" animate="visible" variants={variants}>
     {children}
   </motion.div>
 )
-// Create a <Title> react component that renders an <h1> which is
-
-// centered, palevioletred and sized at 1.5em
 
 const FullpageReactive = () => (
   <Fullpage>
@@ -195,16 +138,7 @@ const IndexPage = () => (
             <br />
             <sub>Senior FrontEnd Developer</sub>
           </h1>
-          <div
-            style={{
-              borderRadius: `100%`,
-              overflow: `hidden`,
-              width: `200px`,
-              marginBottom: `1.45rem`,
-            }}
-          >
-            <Image file={"juan_gabriel.jpg"} />
-          </div>
+          <Avatar />
           <ul tw="flex m-0">
             {social.map((el, index) => (
               <li key={index}>
