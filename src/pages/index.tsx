@@ -195,7 +195,7 @@ const IndexPage = () => (
             <br />
             <sub>Senior FrontEnd Developer</sub>
           </h1>
-          <div
+          {window.innerWidth > 500 ? (<div
             style={{
               borderRadius: `100%`,
               overflow: `hidden`,
@@ -204,7 +204,7 @@ const IndexPage = () => (
             }}
           >
             <Image file={"juan_gabriel.jpg"} />
-          </div>
+          </div>):'' }
           <ul tw="flex m-0">
             {social.map((el, index) => (
               <li key={index}>
