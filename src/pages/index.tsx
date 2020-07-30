@@ -72,7 +72,7 @@ export interface LayoutProps {
 }
 
 const Avatar = () => {
-  const [width, setWidth] = React.useState(0)
+  const [width, setWidth] = React.useState(1024)
   const breakpoint = 620
 
   const ImagePage = () => (
