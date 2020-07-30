@@ -16,6 +16,7 @@ import { motion } from "framer-motion"
 import "twin.macro"
 import Fullpage from "@codegabo/reactivefullpage"
 import { url } from "inspector"
+import { useMedia } from "react-media"
 
 library.add(fab, faCode, faEnvelope, faAngleDoubleDown)
 
@@ -72,8 +73,7 @@ export interface LayoutProps {
 }
 
 const Avatar = () => {
-  const [width, setWidth] = React.useState(1024)
-  const breakpoint = 620
+  const isSmallScreen = useMedia({ query: "(max-width: 599px)" })
 
   const ImagePage = () => (
     <div
@@ -87,13 +87,7 @@ const Avatar = () => {
       <Image file={"juan_gabriel.jpg"} />
     </div>
   )
-  React.useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth)
-    window.addEventListener("resize", handleWindowResize)
-    return () => window.removeEventListener("resize", handleWindowResize)
-  }, [])
-
-  return width > breakpoint ? <ImagePage /> : <hr/>
+  return isSmallScreen ? "" : <ImagePage />
 }
 const SoftAppear = ({ children }: LayoutProps) => (
   <motion.div initial="hidden" animate="visible" variants={variants}>
