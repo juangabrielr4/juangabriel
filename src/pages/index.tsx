@@ -89,6 +89,7 @@ const Avatar = () => {
   )
   return isSmallScreen ? "" : <ImagePage />
 }
+
 const SoftAppear = ({ children }: LayoutProps) => (
   <motion.div initial="hidden" animate="visible" variants={variants}>
     {children}
