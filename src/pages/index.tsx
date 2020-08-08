@@ -133,6 +133,7 @@ const IndexPage = () => (
             <br />
             <sub>Senior FrontEnd Developer</sub>
           </h1>
+          <Avatar />
           <ul tw="flex m-0">
             {social.map((el, index) => (
               <li key={index}>
