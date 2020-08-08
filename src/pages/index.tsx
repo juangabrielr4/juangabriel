@@ -72,6 +72,24 @@ export interface LayoutProps {
   children: React.ReactNode
 }
 
+const Avatar = () => {
+  const isSmallScreen = useMedia({ query: "(max-width: 599px)" })
+
+  const ImagePage = () => (
+    <div
+      style={{
+        borderRadius: `100%`,
+        overflow: `hidden`,
+        width: `200px`,
+        marginBottom: `1.45rem`,
+      }}
+    >
+      <Image file={"juan_gabriel.jpg"} />
+    </div>
+  )
+  return isSmallScreen ? (null)  : <ImagePage />
+}
+
 const SoftAppear = ({ children }: LayoutProps) => (
   <motion.div initial="hidden" animate="visible" variants={variants}>
     {children}
@@ -115,16 +133,7 @@ const IndexPage = () => (
             <br />
             <sub>Senior FrontEnd Developer</sub>
           </h1>
-          <div
-            style={{
-              borderRadius: `100%`,
-              overflow: `hidden`,
-              width: `200px`,
-              marginBottom: `1.45rem`,
-            }}
-          >
-            <Image file={"juan_gabriel.jpg"} />
-          </div>
+          <Avatar />
           <ul tw="flex m-0">
             {social.map((el, index) => (
               <li key={index}>
