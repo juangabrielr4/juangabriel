@@ -75,7 +75,7 @@ export interface LayoutProps {
 const Avatar = () => {
   const isSmallScreen = useMedia({ query: "(max-width: 599px)" })
 
-  const ImagePage = () => (
+  const ImageWrapper = () => (
     <div
       style={{
         borderRadius: `100%`,
@@ -87,7 +87,7 @@ const Avatar = () => {
       <Image file={"juan_gabriel.jpg"} />
     </div>
   )
-  return isSmallScreen ? (null)  : <ImagePage />
+  return isSmallScreen ? (null)  : (<ImageWrapper />)
 }
 
 const SoftAppear = ({ children }: LayoutProps) => (
