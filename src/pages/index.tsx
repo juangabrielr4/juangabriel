@@ -76,7 +76,7 @@ const Avatar = () => {
   const isSmallScreen = useMedia({ query: "(max-width: 599px)" })
 
   const ImagePage = () => (
-    <div>
+    <div className="Image-page">
       <Image file={"juan_gabriel.jpg"} />
     </div>
   )
