@@ -76,14 +76,7 @@ const Avatar = () => {
   const isSmallScreen = useMedia({ query: "(max-width: 599px)" })
 
   const ImagePage = () => (
-    <div
-      style={{
-        borderRadius: `100%`,
-        overflow: `hidden`,
-        width: `200px`,
-        marginBottom: `1.45rem`,
-      }}
-    >
+    <div>
       <Image file={"juan_gabriel.jpg"} />
     </div>
   )
