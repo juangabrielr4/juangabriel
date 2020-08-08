@@ -34,7 +34,7 @@ const social = [
   {
     platform: `twitter`,
     icon: `twitter`,
-    url: `https://twitter.com/DeprecatedUser`,
+    url: `https://twitter.com/juangabrielr4`,
   },
   {
     platform: `codepen`,
