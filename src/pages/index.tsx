@@ -29,7 +29,7 @@ const social = [
   {
     platform: `github`,
     icon: `github`,
-    url: `https://github.com/jg-rc`,
+    url: `https://github.com/juangabrielr4`,
   },
   {
     platform: `twitter`,
