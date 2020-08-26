@@ -195,10 +195,11 @@ const IndexPage = () => (
               </a>
             </div>
           </div>
-          <FontAwesomeIcon icon="AngleDoubleDown" />
+          <FontAwesomeIcon   icon="angle-double-down"  />
         </div>
       </div>
     </Layout>
 )
 
 export default FullpageReactive
+
