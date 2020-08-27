@@ -19,10 +19,12 @@ const useObserver = (options: { threshold: number; root: null }) => {
         setEntries(observedEntries)
       }, observerOptions)
 
-      elements.forEach((element:Element) => observer.current.observe(element))
+      elements.forEach((element:Element) => observer.current && observer.current.observe(element))
     }
     return () => {
-      observer.current.disconnect()
+      if(observer.current){
+        observer.current.disconnect()
+      }
     }
   }, [elements, observerOptions])
 
