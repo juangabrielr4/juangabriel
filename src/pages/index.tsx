@@ -152,7 +152,7 @@ const IndexPage = () => (
             }}
             tw="flex flex-col items-center justify-center"
           >
-            <h1 style={{ color: `#5FB3B3`, fontSize: `21px` }}>
+            <h1 className="animate" style={{ color: `#5FB3B3`, fontSize: `21px` }}>
               Juan Gabriel Ramirez
               <br />
               <sub>Senior FrontEnd Developer</sub>
