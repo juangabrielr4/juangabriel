@@ -85,7 +85,7 @@ const Avatar = () => {
           marginBottom: `1.45rem`,
       }}
     >
-      {isSmallScreen ? null : <Image file={"juan_gabriel.jpg"} />}
+      {isSmallScreen ? null : <Image file="juan_gabriel.jpg" />}
     </div>
   )
 }
@@ -131,6 +131,7 @@ const FullpageReactive = () => {
 
 
 const IndexPage = () => (
+  <>
   <SEO title="Juan Gabriel Ramirez FrontEnd Developer" />
     <Layout>
       <div style={{ position: `relative` }} className="hero">
@@ -199,7 +200,8 @@ const IndexPage = () => (
         </div>
       </div>
     </Layout>
+  </>
 )
 
-export default FullpageReactive
 
+export default FullpageReactive
