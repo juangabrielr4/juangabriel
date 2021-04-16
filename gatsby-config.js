@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Codegabo`,
-    description: `juan gabriel ramirez cruz is a Senior front-end developer with 7+ years of experience currently living in colombia. i'm open to new challenges as a freelance`,
-    author: `@webnalero`,
+    title: `juangabrielr4 front-end developer`,
+    description: `juan gabriel ramirez / juangabrielr4 is a Senior front-end developer with 7+ years of experience currently living in colombia. i'm open to new challenges as a freelance`,
+    author: `@juangabrielr4`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
